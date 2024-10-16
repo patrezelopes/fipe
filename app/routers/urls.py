@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.routers.v1.views.parallelum import router as parallelum
+from app.routers.v1 import cars
 
 api_router = APIRouter()
-api_router.include_router(parallelum, prefix="/fipe", tags=["fipe"])
+api_router.include_router(cars.router, prefix="/cars", tags=["cars"])

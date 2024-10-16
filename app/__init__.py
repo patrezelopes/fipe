@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from app.config import settings
+from app.core.containers import Container
 from app.routers.urls import api_router
 from app.config import settings
 
@@ -15,6 +16,7 @@ config = dotenv_values(".env")
 
 
 def create_app() -> FastAPI:
+    container = Container()
     app = FastAPI(
         title=settings.project_name,
         debug=settings.debug,

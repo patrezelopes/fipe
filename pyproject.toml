@@ -6,7 +6,7 @@ authors = ["Patreze Lopes <patreze@lopes.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.12"
 alembic = "^1.10.4"
 sqlalchemy = "^2.0.12"
 fastapi = "^0.95.1"
@@ -19,6 +19,7 @@ requests = "^2.30.0"
 pytest = "^7.3.1"
 pymongo = "^4.3.3"
 pydantic = "^1.10.7"
+dependency-injector = "^4.42.0"
 
 
 [build-system]
