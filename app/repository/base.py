@@ -3,6 +3,9 @@ from typing import Optional
 
 
 class AbstractRepository(ABC):
+
+    def __init__(self, session):
+        self.session=session
     @abstractmethod
     def list(self, query: Optional[dict] = None) -> list[dict]:
         pass

@@ -16,13 +16,14 @@ config = dotenv_values(".env")
 
 
 def create_app() -> FastAPI:
-    Container()
+    container = Container()
     app = FastAPI(
         title=settings.project_name,
         debug=settings.debug,
         root_path=settings.api_path,
         enviroment=settings.environment,
     )
+    app.container = container
 
     app.add_middleware(
         CORSMiddleware,

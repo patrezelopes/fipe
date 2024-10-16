@@ -3,7 +3,7 @@ from app.repository.base import AbstractRepository
 
 class NoSqlRepository(AbstractRepository):
     def list(self, query=None):
-        pass
+        return ['cached_car1', 'cached_car2', 'cached_car3']
 
     def get(self, id):
         pass

@@ -3,7 +3,8 @@ from app.repository.base import AbstractRepository
 
 class SqlRepository(AbstractRepository):
     def list(self, query=None):
-        pass
+        return ['car1', 'car2', 'car3']
+        #pass
 
     def get(self, id):
         pass
