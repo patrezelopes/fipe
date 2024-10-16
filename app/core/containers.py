@@ -7,7 +7,7 @@ from app.use_cases.car import CarUseCase
 
 class Container(containers.DeclarativeContainer):
 
-    wiring_config = containers.WiringConfiguration(modules=["app.routers.v1.cars"])
+    wiring_config = containers.WiringConfiguration(packages=["app.routers.v1.cars"])
 
     db_session = providers.Resource(
         get_db

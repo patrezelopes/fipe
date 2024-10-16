@@ -2,8 +2,8 @@ from app.use_cases.car_interface import CarUseCaseInterface
 
 
 class CarUseCase(CarUseCaseInterface):
-    def list(self, query):
-        return self.repository.list(query=query)
+    def list(self):
+        return self.repository.list()
 
     def get_by_id(self, id: int):
         return self.repository.get(id=id)

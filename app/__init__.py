@@ -16,7 +16,7 @@ config = dotenv_values(".env")
 
 
 def create_app() -> FastAPI:
-    container = Container()
+    Container()
     app = FastAPI(
         title=settings.project_name,
         debug=settings.debug,
