@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := all
 
-COMPOSE=docker-compose $(COMPOSE_OPTS)
+COMPOSE=docker compose $(COMPOSE_OPTS)
 
 
 # target: help - display callable targets.
@@ -9,15 +9,15 @@ help:
 
 # target: up-db - Starts db
 up-db:
-	$(COMPOSE) up -d bank-db
+	$(COMPOSE) up -d mongo
 
 # target: up-api - Starts api
 up-api:
-	$(COMPOSE) up -d bank-api
+	$(COMPOSE) up -d api
 
 # target: up-worker - Starts worker
 up-worker:
-	$(COMPOSE) up -d worker-bank
+	$(COMPOSE) up -d worker
 
 #Starts all apps
 start: up-db up-api up-worker
